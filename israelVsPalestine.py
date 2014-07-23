@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pickle
 from time import time
-from FindSupport import findTagsByCountry
+from FindSupport import find_tags_by_country
 
 
 israelTags = ["israelunderattack", "supportisrael",
@@ -12,9 +12,9 @@ palestineTags = ["palestineunderattack", "supportpalestine",
                  "palestineunderfire", "prayforgaza"]
 palestine = {}
 israel = {}
-findTagsByCountry(israelTags, israel)
+find_tags_by_country(israelTags, israel)
 
-#findTagsByCountry(palestineTags, palestine)
-    
+# find_tags_by_country(palestineTags, palestine)
+
 #pickle.dump(palestine, open('palestine-' + str(("%.0f" % time()) + '.pkl'), 'w'))
 pickle.dump(israel, open('israel-' + str(("%.0f" % time()) + '.pkl'), 'w'))
